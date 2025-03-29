@@ -3,174 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DentalCAD4You - Revolução Digital na Odontologia</title>
+    <title>DentalCAD4You - Odontologia Digital</title>
     <style>
         :root {
-            --azul-profundo: #2e86de;
-            --dourado: #ffd700;
-            --branco: #ffffff;
-            --cinza-claro: #f8f9fa;
+            --azul-profundo: #1A237E;
+            --ciano-tecnologico: #00B8D4;
+            --branco-absoluto: #FFFFFF;
+            --cinza-clinico: #ECEFF1;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Roboto', 'Helvetica', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--cinza-claro);
-            color: #333;
+            background: var(--cinza-clinico);
+            color: #37474F;
             line-height: 1.8;
         }
-        
-        /* CABEÇALHO MODERNO */
-        header {
-            background: linear-gradient(135deg, var(--azul-profundo) 0%, #1a6fc9 100%);
-            padding: 30px 0;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+        /* Header Holográfico */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-profundo) 0%, #0D47A1 100%);
+            padding: 80px 0 120px;
             position: relative;
             overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            text-align: center;
         }
-        
-        header::after {
-            content: "";
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: var(--cinza-claro);
-            transform: skewY(-3deg);
-            z-index: 1;
-        }
-        
+
         .logo-container {
-            position: relative;
-            z-index: 2;
-            margin-bottom: 15px;
+            width: 220px;
+            margin: 0 auto 30px;
         }
-        
+
         .logo-svg {
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
-        
+
         .sublogo {
-            color: var(--branco);
+            color: var(--branco-absoluto);
             letter-spacing: 3px;
             font-size: 0.9em;
-            text-transform: uppercase;
-            position: relative;
-            z-index: 2;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            background: rgba(0,0,0,0.6);
-            padding: 8px 20px;
+            background: rgba(0,0,0,0.3);
+            padding: 8px 25px;
             border-radius: 30px;
             display: inline-block;
             backdrop-filter: blur(3px);
-            text-shadow: 0 2px 4px 
-        rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
-        
-        /* CONTEÚDO PRINCIPAL */
+
+        /* Conteúdo Principal */
         .main-content {
-            position: relative;
-            z-index: 2;
             max-width: 1200px;
-            margin: -30px auto 50px;
+            margin: -60px auto 80px;
             padding: 40px;
-            background: var(--branco);
+            background: var(--branco-absoluto);
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
-        
+
         h1 {
+            font-family: 'Playfair Display', serif;
             color: var(--azul-profundo);
+            font-size: 2.8em;
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
-        
-        .destaque {
-            color: var(--dourado);
-            background: var(--azul-profundo);
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-        
-        .slogan {
-            text-align: center;
-            font-size: 1.2em;
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            position: relative;
-        }
-        
-        .slogan::after {
-            content: "";
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: var(--dourado);
-            margin: 20px auto;
-        }
-        
-        /* BOTÃO PRINCIPAL */
+
         .cta-button {
             display: inline-block;
-            background: var(--azul-profundo);
-            color: var(--branco);
-            padding: 12px 30px;
+            background: var(--ciano-tecnologico);
+            color: var(--branco-absoluto);
+            padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            margin: 20px auto;
-            text-align: center;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(46, 134, 222, 0.4);
+            box-shadow: 0 4px 15px rgba(0,184,212,0.4);
         }
-        
+
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(46, 134, 222, 0.6);
-            background: #1a6fc9;
+            box-shadow: 0 6px 20px rgba(0,184,212,0.6);
+        }
+
+        /* Navegação */
+        nav {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        nav a {
+            color: var(--azul-profundo);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--ciano-tecnologico);
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- CABEÇALHO COM EFEITO MODERNO -->
-    <header>
+    <!-- Cabeçalho -->
+    <header class="hero">
         <div class="logo-container">
             <svg class="logo-svg" width="220" height="70" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg">
-                <!-- Dente estilizado 3D -->
                 <path d="M35,25 Q50,10 70,15 Q85,25 75,40 Q60,50 40,45 Q25,35 35,25 Z" 
-                      fill="var(--branco)" stroke="var(--azul-profundo)" stroke-width="1.5"/>
-                
-                <!-- Elementos CAD -->
-                <rect x="90" y="20" width="35" height="35" fill="none" stroke="var(--branco)" stroke-width="2"/>
-                <line x1="90" y1="30" x2="125" y2="30" stroke="var(--branco)" stroke-width="1.2"/>
-                <line x1="90" y1="40" x2="125" y2="40" stroke="var(--branco)" stroke-width="1.2"/>
-                <line x1="100" y1="20" x2="100" y2="55" stroke="var(--branco)" stroke-width="1.2"/>
-                <line x1="110" y1="20" x2="110" y2="55" stroke="var(--branco)" stroke-width="1.2"/>
-                
-                <!-- Texto -->
-                <text x="135" y="40" font-family="Arial" font-weight="bold" font-size="26" fill="var(--branco)">DentalCAD</text>
-                <text x="135" y="55" font-family="Arial" font-size="18" fill="var(--dourado)">4You</text>
+                      fill="var(--branco-absoluto)" stroke="var(--azul-profundo)" stroke-width="1.5"/>
+                <rect x="90" y="20" width="35" height="35" fill="none" stroke="var(--branco-absoluto)" stroke-width="2"/>
+                <text x="135" y="40" font-family="Arial" font-weight="bold" font-size="22" fill="var(--branco-absoluto)">DentalCAD</text>
+                <text x="135" y="55" font-family="Arial" font-size="16" fill="var(--ciano-tecnologico)">4You</text>
             </svg>
         </div>
         <div class="sublogo">INOVAÇÃO TECNOLÓGICA EM ODONTOLOGIA</div>
     </header>
-    
-    <!-- CONTEÚDO PRINCIPAL -->
+
+    <!-- Conteúdo Principal -->
     <div class="main-content">
-        <h1>Bem-vindo ao <span class="destaque">DentalCAD4You</span></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <h1>Bem-vindo ao <span style="color: var(--ciano-tecnologico)">DentalCAD4You</span></h1>
         
-        <p class="slogan">
-            Soluções digitais inovadoras para odontologia!
-        </p>
-        
-        <!-- BOTÃO DE CALL-TO-ACTION -->
-        <div style="text-align: center;">
-            <a href="servicos.html" class="cta-button">CONHEÇA NOSSOS SERVIÇOS</a>
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="servicos.html" class="cta-button">Ver Serviços</a>
+        </div>
+
+        <!-- Seção de Destaques -->
+        <div style="display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div style="background: var(--cinza-clinico); padding: 20px; border-radius: 10px;">
+                <h3>🦷 Modelagem 3D</h3>
+                <p>Precisão digital para implantes e próteses</p>
+            </div>
+            <div style="background: var(--cinza-clinico); padding: 20px; border-radius: 10px;">
+                <h3>📐 Análise Oclusal</h3>
+                <p>Simulação biomecânica avançada</p>
+            </div>
+            <div style="background: var(--cinza-clinico); padding: 20px; border-radius: 10px;">
+                <h3>🖨️ Impressão 3D</h3>
+                <p>Prototipagem rápida e precisa</p>
+            </div>
         </div>
     </div>
 </body>
