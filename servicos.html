@@ -3,71 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DentalCAD4You - Odontologia Digital</title>
+    <title>Serviços - DentalCAD4You | Soluções em Odontologia Digital</title>
+    <meta name="keywords" content="modelagem 3D dental, planejamento cirúrgico, CAD/CAM odontológico, exocad, implantes guiados">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --azul-dental: #2e86de;
-            --cinza-claro: #f8f9fa;
+            --azul-profundo: #1A237E;
+            --ciano-tecnologico: #00B8D4;
+            --branco-absoluto: #FFFFFF;
+            --cinza-clinico: #ECEFF1;
         }
+
         body {
-            font-family: 'Arial', sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: var(--cinza-clinico);
+            color: #37474F;
+            line-height: 1.8;
         }
-        nav {
-            background: var(--azul-dental);
+
+        /* Cabeçalho */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-profundo) 0%, #0D47A1 100%);
+            padding: 60px 0 100px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        .logo-container {
+            width: 220px;
+            margin: 0 auto 20px;
+        }
+
+        /* Conteúdo Principal */
+        .main-content {
+            max-width: 1200px;
+            margin: -50px auto 50px;
+            padding: 40px;
+            background: var(--branco-absoluto);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--azul-profundo);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        /* Tabela de Serviços */
+        .servico-detalhado {
+            margin: 40px 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        th, td {
             padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 30px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
-        nav a {
+
+        th {
+            background-color: var(--azul-profundo);
             color: white;
-            text-decoration: none;
-            margin: 0 15px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .preco {
+            color: var(--azul-profundo);
             font-weight: bold;
         }
-        h1 {
-            color: var(--azul-dental);
-            text-align: center;
-            margin-bottom: 20px;
+
+        /* Botões */
+        .btn-orcamento {
+            display: inline-block;
+            background: var(--ciano-tecnologico);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
         }
-        .servicos {
-            background: var(--cinza-claro);
-            padding: 25px;
-            border-radius: 10px;
-            margin: 30px 0;
-        }
-        .servicos li {
-            margin: 10px 0;
-            padding-left: 10px;
-            border-left: 3px solid var(--azul-dental);
+
+        .btn-orcamento:hover {
+            background: #008ba3;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
-    <!-- Menu de Navegação Corrigido -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-    </nav>
+    <header class="hero">
+        <div class="logo-container">
+            <svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30,20 Q45,10 60,20 Q75,30 60,40 Q45,50 30,40 Q15,30 30,20 Z" 
+                      fill="white" stroke="#1A237E" stroke-width="1.5"/>
+                <text x="80" y="40" font-family="Arial" font-weight="bold" font-size="22" fill="white">DentalCAD4You</text>
+            </svg>
+        </div>
+    </header>
 
-    <h1>Bem-vindo ao DentalCAD4You</h1>
-    <p style="text-align: center; font-size: 1.1em;">
-        Soluções digitais inovadoras para odontologia!
-    </p>
+    <div class="main-content">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
 
-    <div class="servicos">
-        <h2>Nossos Serviços</h2>
-        <ul>
-            <li>Modelagem 3D para próteses dentárias</li>
-            <li>Conversão de arquivos DICOM para STL</li>
-            <li>Otimização de modelos para impressão 3D</li>
-            <li>Análise digital de oclusão</li>
-            <li>Suporte técnico especializado</li>
-        </ul>
+        <h1>Nossos Serviços Profissionais</h1>
+
+        <div class="servico-detalhado">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serviço</th>
+                        <th>Descrição</th>
+                        <th>Prazo</th>
+                        <th>Investimento</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Modelagem 3D Completa</strong></td>
+                        <td>Prótese unitária em STL com análise oclusal</td>
+                        <td>24-48h</td>
+                        <td class="preco">R$ 349,90</td>
+                        <td><a href="contato.html?servico=modelagem" class="btn-orcamento">Solicitar</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Planejamento Cirúrgico</strong></td>
+                        <td>Guia cirúrgico para implantes com integração CBCT</td>
+                        <td>3-5 dias</td>
+                        <td class="preco">R$ 799,90</td>
+                        <td><a href="contato.html?servico=cirurgia" class="btn-orcamento">Solicitar</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paciente Completo</strong></td>
+                        <td>Arcos superior e inferior com relatório biomecânico</td>
+                        <td>5-7 dias</td>
+                        <td class="preco">R$ 1.299,90</td>
+                        <td><a href="contato.html?servico=paciente" class="btn-orcamento">Solicitar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="contato.html" class="btn-orcamento" style="padding: 15px 30px;">
+                <i class="fas fa-paper-plane"></i> SOLICITAR ORÇAMENTO PERSONALIZADO
+            </a>
+        </div>
     </div>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999" style="position:fixed; bottom:30px; right:30px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; text-align:center; line-height:60px; font-size:30px; box-shadow:0 5px 15px rgba(0,0,0,0.2); z-index:100;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
