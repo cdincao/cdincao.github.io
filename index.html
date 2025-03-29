@@ -20,7 +20,7 @@
             line-height: 1.8;
         }
 
-        /* Cabeçalho Atualizado */
+        /* Cabeçalho */
         .hero {
             background: linear-gradient(135deg, var(--azul-profundo) 0%, #0D47A1 100%);
             padding: 80px 0 120px;
@@ -67,6 +67,33 @@
             margin-bottom: 30px;
         }
 
+        /* Grade de Serviços */
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .servico-card {
+            background: var(--cinza-clinico);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--ciano-tecnologico);
+            transition: transform 0.3s;
+        }
+
+        .servico-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .servico-card h3 {
+            color: var(--azul-profundo);
+            margin-top: 0;
+        }
+
+        /* Botões */
         .cta-button {
             display: inline-block;
             background: var(--ciano-tecnologico);
@@ -77,6 +104,8 @@
             font-weight: bold;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0,184,212,0.4);
+            margin: 20px auto;
+            text-align: center;
         }
 
         .cta-button:hover {
@@ -84,6 +113,7 @@
             box-shadow: 0 6px 20px rgba(0,184,212,0.6);
         }
 
+        /* Navegação */
         nav {
             text-align: center;
             margin: 30px 0;
@@ -104,9 +134,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header class="hero">
         <div class="logo-container">
-            <!-- LOGOTIPO CORRIGIDO (COM "CAD") -->
             <svg class="logo-svg" width="280" height="70" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg">
                 <path d="M35,25 Q50,10 70,15 Q85,25 75,40 Q60,50 40,45 Q25,35 35,25 Z" 
                       fill="var(--branco-absoluto)" stroke="var(--azul-profundo)" stroke-width="1.5"/>
@@ -118,6 +148,7 @@
         <div class="sublogo">INOVAÇÃO TECNOLÓGICA EM ODONTOLOGIA</div>
     </header>
 
+    <!-- Conteúdo Principal -->
     <div class="main-content">
         <nav>
             <a href="index.html">Home</a>
@@ -127,8 +158,36 @@
 
         <h1>Bem-vindo ao <span style="color: var(--ciano-tecnologico)">DentalCAD4You</span></h1>
         
-        <div style="text-align: center; margin: 40px 0;">
-            <a href="servicos.html" class="cta-button">CONHEÇA NOSSOS SERVIÇOS</a>
+        <a href="servicos.html" class="cta-button">CONHEÇA NOSSOS SERVIÇOS</a>
+
+        <!-- Grade de Serviços -->
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <h3>🦷 Modelagem 3D</h3>
+                <p>Precisão digital para implantes e próteses</p>
+                <ul>
+                    <li>Tolerância de até 20μm</li>
+                    <li>Compatível com scanners intraorais</li>
+                </ul>
+            </div>
+            
+            <div class="servico-card">
+                <h3>📐 Análise Oclusal</h3>
+                <p>Simulação biomecânica avançada</p>
+                <ul>
+                    <li>Análise de forças mastigatórias</li>
+                    <li>Integração com CBCT</li>
+                </ul>
+            </div>
+            
+            <div class="servico-card">
+                <h3>🖨️ Impressão 3D</h3>
+                <p>Prototipagem rápida e precisa</p>
+                <ul>
+                    <li>Materiais biocompatíveis</li>
+                    <li>Suporte para SLA/DLP</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
