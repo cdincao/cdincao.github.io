@@ -1,22 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Contato - DentalCAD4You</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - DentalCAD4You | Agende uma Demonstração</title>
+    <meta name="keywords" content="contato dentalcad, suporte técnico odontológico, agendamento demo">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: Arial; max-width: 600px; margin: 0 auto; padding: 20px; }
-        form { background: #f8f9fa; padding: 20px; border-radius: 8px; }
-        input, textarea { width: 100%; margin: 8px 0; padding: 8px; }
+        :root {
+            --azul-profundo: #1A237E;
+            --ciano-tecnologico: #00B8D4;
+            --branco-absoluto: #FFFFFF;
+            --cinza-clinico: #ECEFF1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: var(--cinza-clinico);
+            color: #37474F;
+            line-height: 1.8;
+        }
+
+        /* Cabeçalho */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-profundo) 0%, #0D47A1 100%);
+            padding: 60px 0 100px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        /* Formulário */
+        .form-container {
+            max-width: 800px;
+            margin: -50px auto 50px;
+            padding: 40px;
+            background: var(--branco-absoluto);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .btn-enviar {
+            background: var(--ciano-tecnologico);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn-enviar:hover {
+            background: #008ba3;
+            transform: translateY(-2px);
+        }
+
+        /* Upload de Arquivos */
+        .file-upload {
+            border: 2px dashed #ddd;
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .file-upload input {
+            display: none;
+        }
+
+        .file-upload label {
+            color: var(--ciano-tecnologico);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <h1>Envie seus arquivos</h1>
-    <form action="https://formsubmit.co/cristiano.dincao@gmail.com" method="POST" enctype="multipart/form-data">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <input type="file" name="arquivos" multiple accept=".stl,.dcm,.dicom">
-        <textarea name="mensagem" placeholder="Detalhes do serviço"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
-    <a href="index.html">← Voltar</a>
+    <header class="hero">
+        <div class="logo-container">
+            <svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30,20 Q45,10 60,20 Q75,30 60,40 Q45,50 30,40 Q15,30 30,20 Z" 
+                      fill="white" stroke="#1A237E" stroke-width="1.5"/>
+                <text x="80" y="40" font-family="Arial" font-weight="bold" font-size="22" fill="white">DentalCAD4You</text>
+            </svg>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <h1 style="font-family: 'Playfair Display'; color: var(--azul-profundo); text-align: center; margin-bottom: 30px;">Fale Conosco</h1>
+
+        <form action="https://formsubmit.co/seu-email@provedor.com" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="Novo contato do site DentalCAD4You">
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail Profissional</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="servico">Serviço de Interesse</label>
+                <select id="servico" name="servico">
+                    <option value="">Selecione...</option>
+                    <option value="Modelagem 3D">Modelagem 3D</option>
+                    <option value="Planejamento Cirúrgico">Planejamento Cirúrgico</option>
+                    <option value="Paciente Completo">Paciente Completo</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Detalhes do Projeto</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+            </div>
+
+            <div class="file-upload">
+                <input type="file" id="arquivo" name="arquivo" accept=".stl,.dcm,.dicom,.pdf">
+                <label for="arquivo"><i class="fas fa-cloud-upload-alt"></i> Anexar Arquivos (STL, DICOM, PDF)</label>
+            </div>
+
+            <button type="submit" class="btn-enviar">
+                <i class="fas fa-paper-plane"></i> ENVIAR MENSAGEM
+            </button>
+        </form>
+    </div>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999" style="position:fixed; bottom:30px; right:30px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; text-align:center; line-height:60px; font-size:30px; box-shadow:0 5px 15px rgba(0,0,0,0.2); z-index:100;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
