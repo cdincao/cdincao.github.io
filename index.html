@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>DentalCAD4You</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCAD4You - Odontologia Digital</title>
     <style>
-        nav { text-align: center; margin: 20px 0; }
-        nav a { margin: 0 15px; text-decoration: none; color: #2e86de; }
+        :root {
+            --azul-dental: #2e86de;
+            --cinza-claro: #f8f9fa;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        nav {
+            background: var(--azul-dental);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        h1 {
+            color: var(--azul-dental);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .servicos {
+            background: var(--cinza-claro);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .servicos li {
+            margin: 10px 0;
+            padding-left: 10px;
+            border-left: 3px solid var(--azul-dental);
+        }
     </style>
 </head>
 <body>
-    <!-- Menu de Navegação ADICIONADO AQUI -->
+    <!-- Menu de Navegação Corrigido -->
     <nav>
         <a href="index.html">Home</a>
         <a href="servicos.html">Serviços</a>
@@ -16,16 +55,19 @@
     </nav>
 
     <h1>Bem-vindo ao DentalCAD4You</h1>
-    <p>Soluções digitais inovadoras para odontologia!</p>
-    <a href="contato.html" style="...">Fale Conosco</a> <!-- Mantenha seu botão existente -->
+    <p style="text-align: center; font-size: 1.1em;">
+        Soluções digitais inovadoras para odontologia!
+    </p>
 
-    <section>
+    <div class="servicos">
         <h2>Nossos Serviços</h2>
         <ul>
             <li>Modelagem 3D para próteses dentárias</li>
             <li>Conversão de arquivos DICOM para STL</li>
             <li>Otimização de modelos para impressão 3D</li>
+            <li>Análise digital de oclusão</li>
+            <li>Suporte técnico especializado</li>
         </ul>
-    </section>
+    </div>
 </body>
 </html>
