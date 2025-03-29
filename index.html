@@ -3,185 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DentalCAD4You - Serviços</title>
+  <title>DentalCAD4You - Soluções Digitais</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <style>
-    /* RESET E ESTILOS GLOBAIS (MANTIDOS) */
+    :root {
+      --azul-principal: #2a7fba;
+      --azul-claro: #e3f2fd;
+      --laranja: #ff6b35;
+    }
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
     
     body {
-      background-color: #f5f5f5;
-      padding: 20px;
+      background: #f9f9f9;
+      color: #333;
     }
-
-    /* CONTAINER PRINCIPAL (IGUAL AO ANTERIOR) */
-    .services-carousel {
+    
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, var(--azul-principal), #1a5276);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-bottom: 40px;
+    }
+    
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .destaque {
+      background: var(--laranja);
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+    
+    /* CARROSSEL */
+    .carrossel-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 0 60px; /* Adicionado mais espaço abaixo */
+      padding: 0 20px 60px;
     }
-
-    .services-carousel h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #2c3e50;
-      font-size: 28px;
-    }
-
-    /* CARROSSEL (VERSÃO ESTÁVEL) */
+    
     .swiper {
       width: 100%;
-      padding: 10px 0 30px; /* Ajuste fino no padding */
+      padding: 30px 0;
     }
-
-    /* CARDS (MESMO ESTILO QUE FUNCIONAVA) */
-    .service-card {
+    
+    .servico-card {
       background: white;
       border-radius: 12px;
-      padding: 25px;
-      width: 95%; /* Pequeno ajuste para margens */
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       height: 100%;
-      margin: 0 auto; /* Centraliza os cards */
-      transition: all 0.3s ease;
+      margin: 0 10px;
+      transition: all 0.3s;
     }
-
-    .service-card:hover {
+    
+    .servico-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
-
-    .service-card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 15px;
+    
+    .servico-card img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 20px;
       object-fit: contain;
     }
-
-    .service-card h3 {
-      color: #2980b9;
-      margin-bottom: 12px;
-      font-size: 20px;
+    
+    .servico-card h3 {
+      color: var(--azul-principal);
+      margin-bottom: 15px;
     }
-
-    .service-card p {
+    
+    .servico-card p {
       color: #555;
       margin-bottom: 20px;
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: 15px;
     }
-
-    .service-card button {
-      background: #3498db;
+    
+    .btn {
+      display: inline-block;
+      background: var(--azul-principal);
       color: white;
-      border: none;
-      padding: 10px 20px;
+      padding: 10px 25px;
       border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 600;
       transition: background 0.3s;
     }
-
-    .service-card button:hover {
-      background: #2980b9;
+    
+    .btn:hover {
+      background: #1a5276;
     }
-
-    /* CARD DESTAQUE (EXOCAD) */
-    .service-card.highlight {
-      background: #e3f2fd;
-      border: 2px solid #3498db;
+    
+    .destaque-card {
+      background: var(--azul-claro);
+      border: 2px solid var(--azul-principal);
     }
-
-    /* NAVEGAÇÃO (SETAS MAIS DISCRETAS) */
-    .swiper-button-next, 
+    
+    /* NAVEGAÇÃO */
+    .swiper-button-next,
     .swiper-button-prev {
-      color: #3498db !important;
+      color: var(--azul-principal) !important;
       background: rgba(255,255,255,0.9);
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
-    .swiper-button-next:after, 
-    .swiper-button-prev:after {
-      font-size: 18px !important;
+    
+    /* RODAPÉ/CONTATO */
+    .contato {
+      background: #2c3e50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
     }
-
-    /* RESPONSIVIDADE (MESMO PADRÃO) */
+    
+    .contato h2 {
+      margin-bottom: 20px;
+    }
+    
+    .contato-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .contato a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+    
+    .contato a:hover {
+      color: var(--laranja);
+    }
+    
     @media (max-width: 768px) {
-      .service-card {
-        padding: 20px 15px;
+      .header h1 {
+        font-size: 2rem;
       }
-      .swiper-button-next, 
+      
+      .servico-card {
+        padding: 20px;
+      }
+      
+      .swiper-button-next,
       .swiper-button-prev {
         display: none;
+      }
+      
+      .contato-links {
+        flex-direction: column;
+        gap: 15px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- SEÇÃO PRINCIPAL (MESMA ESTRUTURA) -->
-  <section class="services-carousel">
-    <h2>NOSSOS SERVIÇOS</h2>
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <h1>Bem-vindo ao DentalCAD4You</h1>
+    <div class="destaque">ÚNICO SOFTWARE COM INTEGRAÇÃO TOTAL AO EXOCAD</div>
+    <p>Projete diretamente para seu fluxo de trabalho atual</p>
+  </header>
+  
+  <!-- CARROSSEL DE SERVIÇOS -->
+  <div class="carrossel-container">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">NOSSOS SERVIÇOS</h2>
     
-    <!-- CARROSSEL SWIPER -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <!-- CARD 1: MODELAGEM 3D -->
+        <!-- SERVIÇO 1 -->
         <div class="swiper-slide">
-          <div class="service-card">
-            <img src="https://via.placeholder.com/60x60?text=3D" alt="Modelagem 3D">
+          <div class="servico-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Modelagem 3D">
             <h3>Modelagem 3D</h3>
             <p>Projetos digitais para implantes e próteses com integração total ao Exocad.</p>
-            <button>Saiba mais</button>
+            <a href="#contato" class="btn">Saiba mais</a>
           </div>
         </div>
-
-        <!-- CARD 2: CIRURGIA -->
+        
+        <!-- SERVIÇO 2 -->
         <div class="swiper-slide">
-          <div class="service-card">
-            <img src="https://via.placeholder.com/60x60?text=✚" alt="Cirurgia">
+          <div class="servico-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3059/3059518.png" alt="Cirurgia">
             <h3>Planejamento Cirúrgico</h3>
             <p>Ferramentas precisas para simulação cirúrgica e análise de densidade óssea.</p>
-            <button>Saiba mais</button>
+            <a href="#contato" class="btn">Saiba mais</a>
           </div>
         </div>
-
-        <!-- CARD 3: IMPRESSÃO 3D -->
+        
+        <!-- SERVIÇO 3 -->
         <div class="swiper-slide">
-          <div class="service-card">
-            <img src="https://via.placeholder.com/60x60?text=🖨️" alt="Impressão 3D">
+          <div class="servico-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/4643/4643991.png" alt="Impressão 3D">
             <h3>Impressão 3D</h3>
             <p>Protótipos em materiais biocompatíveis com suporte para multicolor.</p>
-            <button>Saiba mais</button>
+            <a href="#contato" class="btn">Saiba mais</a>
           </div>
         </div>
-
-        <!-- CARD 4: EXOCAD (DESTAQUE) -->
+        
+        <!-- DESTAQUE EXOCAD -->
         <div class="swiper-slide">
-          <div class="service-card highlight">
-            <img src="https://via.placeholder.com/60x60?text=EXO" alt="Exocad">
+          <div class="servico-card destaque-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1086/1086741.png" alt="Exocad">
             <h3>Integração Exocad</h3>
             <p>Único software com integração total ao Exocad para fluxos otimizados.</p>
-            <button>Demonstração</button>
+            <a href="#contato" class="btn">Demonstração</a>
           </div>
         </div>
       </div>
-
-      <!-- CONTROLES DE NAVEGAÇÃO -->
+      
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
-  </section>
-
-  <!-- SWIPER JS (MESMA VERSÃO) -->
+  </div>
+  
+  <!-- RODAPÉ/CONTATO -->
+  <footer id="contato" class="contato">
+    <h2>Entre em Contato</h2>
+    <div class="contato-links">
+      <a href="tel:+5511999999999">
+        <img src="https://cdn-icons-png.flaticon.com/512/126/126341.png" width="20" alt="Telefone">
+        (11) 99999-9999
+      </a>
+      <a href="mailto:contato@dentalcad4you.com.br">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="20" alt="Email">
+        contato@dentalcad4you.com.br
+      </a>
+      <a href="https://wa.me/5511999999999" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" width="20" alt="WhatsApp">
+        WhatsApp
+      </a>
+    </div>
+  </footer>
+  
+  <!-- SWIPER JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
