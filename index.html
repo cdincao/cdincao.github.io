@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DentalCAD4You - Odontologia Digital</title>
+    <title>DentalCAD4You - Planejamento Cirúrgico e Modelagem 3D Integrada</title>
+    <meta name="keywords" content="planejamento cirúrgico, cirurgia guiada, modelagem 3d, exocad, implantes dentários, CAD design">
+    <meta name="description" content="Software DentalCAD4You: Solução completa para planejamento cirúrgico e modelagem 3D integrada ao exocad. Revolucione sua clínica!">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --azul-profundo: #1A237E;
             --ciano-tecnologico: #00B8D4;
             --branco-absoluto: #FFFFFF;
             --cinza-clinico: #ECEFF1;
+            --verde-whatsapp: #25D366;
         }
 
         body {
@@ -67,6 +72,23 @@
             margin-bottom: 30px;
         }
 
+        h2 {
+            color: var(--azul-profundo);
+            border-bottom: 2px solid var(--ciano-tecnologico);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        /* Destaque Exclusivo */
+        .destaque-exclusivo {
+            background: #E3F2FD;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+            border-left: 5px solid var(--ciano-tecnologico);
+        }
+
         /* Grade de Serviços */
         .servicos-grid {
             display: grid;
@@ -96,21 +118,35 @@
         /* Botões */
         .cta-button {
             display: inline-block;
-            background: var(--ciano-tecnologico);
-            color: var(--branco-absoluto);
-            padding: 15px 40px;
+            padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0,184,212,0.4);
-            margin: 20px auto;
+            margin: 10px;
             text-align: center;
         }
 
-        .cta-button:hover {
+        .cta-primary {
+            background: var(--ciano-tecnologico);
+            color: var(--branco-absoluto);
+            box-shadow: 0 4px 15px rgba(0,184,212,0.4);
+        }
+
+        .cta-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0,184,212,0.6);
+        }
+
+        .cta-whatsapp {
+            background: var(--verde-whatsapp);
+            color: var(--branco-absoluto);
+            box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+        }
+
+        .cta-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37,211,102,0.6);
         }
 
         /* Navegação */
@@ -130,8 +166,29 @@
         nav a:hover {
             color: var(--ciano-tecnologico);
         }
+
+        /* WhatsApp Flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--verde-whatsapp);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -158,30 +215,46 @@
 
         <h1>Bem-vindo ao <span style="color: var(--ciano-tecnologico)">DentalCAD4You</span></h1>
         
-        <a href="servicos.html" class="cta-button">CONHEÇA NOSSOS SERVIÇOS</a>
+        <!-- Destaque Exclusivo -->
+        <div class="destaque-exclusivo">
+            <h3 style="color: var(--azul-profundo); margin-top: 0;">ÚNICO SOFTWARE COM INTEGRAÇÃO TOTAL AO EXOCAD</h3>
+            <p>Exporte projetos diretamente para seu fluxo de trabalho atual</p>
+        </div>
+
+        <!-- Chamadas para Ação -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="contato.html" class="cta-button cta-primary">
+                <i class="fas fa-calendar-alt"></i> AGENDE DEMO
+            </a>
+            <a href="https://wa.me/5511999999999" class="cta-button cta-whatsapp">
+                <i class="fab fa-whatsapp"></i> FALE DIRETO
+            </a>
+        </div>
 
         <!-- Grade de Serviços -->
+        <h2>NOSSOS SERVIÇOS</h2>
         <div class="servicos-grid">
             <div class="servico-card">
-                <h3>🦷 Modelagem 3D</h3>
+                <h3><i class="fas fa-tooth"></i> Modelagem 3D</h3>
                 <p>Precisão digital para implantes e próteses</p>
                 <ul>
                     <li>Tolerância de até 20μm</li>
                     <li>Compatível com scanners intraorais</li>
+                    <li>Integração com exocad</li>
                 </ul>
             </div>
             
             <div class="servico-card">
-                <h3>📐 Análise Oclusal</h3>
-                <p>Simulação biomecânica avançada</p>
+                <h3><i class="fas fa-bone"></i> Planejamento Cirúrgico</h3>
+                <p>Cirurgia guiada com precisão milimétrica</p>
                 <ul>
-                    <li>Análise de forças mastigatórias</li>
-                    <li>Integração com CBCT</li>
+                    <li>Análise de densidade óssea</li>
+                    <li>Simulação de posicionamento</li>
                 </ul>
             </div>
             
             <div class="servico-card">
-                <h3>🖨️ Impressão 3D</h3>
+                <h3><i class="fas fa-print"></i> Impressão 3D</h3>
                 <p>Prototipagem rápida e precisa</p>
                 <ul>
                     <li>Materiais biocompatíveis</li>
@@ -190,5 +263,10 @@
             </div>
         </div>
     </div>
+
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
