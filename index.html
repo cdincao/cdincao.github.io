@@ -1,279 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DentalCAD4You - Soluções Digitais</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <style>
-    :root {
-      --azul-principal: #2a7fba;
-      --azul-claro: #e3f2fd;
-      --laranja: #ff6b35;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    
-    body {
-      background: #f9f9f9;
-      color: #333;
-    }
-    
-    /* HEADER */
-    .header {
-      background: linear-gradient(135deg, var(--azul-principal), #1a5276);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      margin-bottom: 40px;
-    }
-    
-    .header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-    
-    .destaque {
-      background: var(--laranja);
-      display: inline-block;
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-      margin: 15px 0;
-    }
-    
-    /* CARROSSEL */
-    .carrossel-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px 60px;
-    }
-    
-    .swiper {
-      width: 100%;
-      padding: 30px 0;
-    }
-    
-    .servico-card {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      height: 100%;
-      margin: 0 10px;
-      transition: all 0.3s;
-    }
-    
-    .servico-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    
-    .servico-card img {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 20px;
-      object-fit: contain;
-    }
-    
-    .servico-card h3 {
-      color: var(--azul-principal);
-      margin-bottom: 15px;
-    }
-    
-    .servico-card p {
-      color: #555;
-      margin-bottom: 20px;
-      font-size: 15px;
-    }
-    
-    .btn {
-      display: inline-block;
-      background: var(--azul-principal);
-      color: white;
-      padding: 10px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    
-    .btn:hover {
-      background: #1a5276;
-    }
-    
-    .destaque-card {
-      background: var(--azul-claro);
-      border: 2px solid var(--azul-principal);
-    }
-    
-    /* NAVEGAÇÃO */
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: var(--azul-principal) !important;
-      background: rgba(255,255,255,0.9);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    /* RODAPÉ/CONTATO */
-    .contato {
-      background: #2c3e50;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    
-    .contato h2 {
-      margin-bottom: 20px;
-    }
-    
-    .contato-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    
-    .contato a {
-      color: white;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.3s;
-    }
-    
-    .contato a:hover {
-      color: var(--laranja);
-    }
-    
-    @media (max-width: 768px) {
-      .header h1 {
-        font-size: 2rem;
-      }
-      
-      .servico-card {
-        padding: 20px;
-      }
-      
-      .swiper-button-next,
-      .swiper-button-prev {
-        display: none;
-      }
-      
-      .contato-links {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCAD4You - Soluções Digitais</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: #f0f8ff;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .destaque {
+            color: #2a7fba;
+            font-size: 1.2em;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        
+        .servico {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 4px solid #2a7fba;
+        }
+        
+        .servico h3 {
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        li:before {
+            content: "•";
+            color: #ff6b35;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-  <!-- CABEÇALHO -->
-  <header class="header">
-    <h1>Bem-vindo ao DentalCAD4You</h1>
-    <div class="destaque">ÚNICO SOFTWARE COM INTEGRAÇÃO TOTAL AO EXOCAD</div>
-    <p>Projete diretamente para seu fluxo de trabalho atual</p>
-  </header>
-  
-  <!-- CARROSSEL DE SERVIÇOS -->
-  <div class="carrossel-container">
-    <h2 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">NOSSOS SERVIÇOS</h2>
-    
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <!-- SERVIÇO 1 -->
-        <div class="swiper-slide">
-          <div class="servico-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/2779/2779775.png" alt="Modelagem 3D">
+    <div class="header">
+        <h1>Bem-vindo ao DentalCAD4You</h1>
+        <p class="destaque">ÚNICO SOFTWARE COM INTEGRAÇÃO TOTAL AO EXOCAD</p>
+        <p>Projete diretamente para seu fluxo de trabalho atual</p>
+    </div>
+
+    <section>
+        <h2>NOSSOS SERVIÇOS</h2>
+        
+        <div class="servico">
             <h3>Modelagem 3D</h3>
-            <p>Projetos digitais para implantes e próteses com integração total ao Exocad.</p>
-            <a href="#contato" class="btn">Saiba mais</a>
-          </div>
+            <p>Projeto digital para implantes e próteses</p>
+            <ul>
+                <li>Trabalhos de até 25cm</li>
+                <li>Compatível com scanners intraorais</li>
+                <li>Integração sem falhas</li>
+            </ul>
         </div>
-        
-        <!-- SERVIÇO 2 -->
-        <div class="swiper-slide">
-          <div class="servico-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3059/3059518.png" alt="Cirurgia">
+
+        <div class="servico">
             <h3>Planejamento Cirúrgico</h3>
-            <p>Ferramentas precisas para simulação cirúrgica e análise de densidade óssea.</p>
-            <a href="#contato" class="btn">Saiba mais</a>
-          </div>
+            <p>Ferramentas completas com precisão cirúrgica</p>
+            <ul>
+                <li>Análise de densidade óssea</li>
+                <li>Simulação de posicionamento</li>
+            </ul>
         </div>
-        
-        <!-- SERVIÇO 3 -->
-        <div class="swiper-slide">
-          <div class="servico-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/4643/4643991.png" alt="Impressão 3D">
+
+        <div class="servico">
             <h3>Impressão 3D</h3>
-            <p>Protótipos em materiais biocompatíveis com suporte para multicolor.</p>
-            <a href="#contato" class="btn">Saiba mais</a>
-          </div>
+            <p>Prototipagem rápida e precisa</p>
+            <ul>
+                <li>Materiais biocompatíveis</li>
+                <li>Suporte para SLA/DLP</li>
+            </ul>
         </div>
-        
-        <!-- DESTAQUE EXOCAD -->
-        <div class="swiper-slide">
-          <div class="servico-card destaque-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/1086/1086741.png" alt="Exocad">
-            <h3>Integração Exocad</h3>
-            <p>Único software com integração total ao Exocad para fluxos otimizados.</p>
-            <a href="#contato" class="btn">Demonstração</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
-  
-  <!-- RODAPÉ/CONTATO -->
-  <footer id="contato" class="contato">
-    <h2>Entre em Contato</h2>
-    <div class="contato-links">
-      <a href="tel:+5511999999999">
-        <img src="https://cdn-icons-png.flaticon.com/512/126/126341.png" width="20" alt="Telefone">
-        (11) 99999-9999
-      </a>
-      <a href="mailto:contato@dentalcad4you.com.br">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="20" alt="Email">
-        contato@dentalcad4you.com.br
-      </a>
-      <a href="https://wa.me/5511999999999" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" width="20" alt="WhatsApp">
-        WhatsApp
-      </a>
-    </div>
-  </footer>
-  
-  <!-- SWIPER JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      },
-      autoplay: {
-        delay: 7000,
-        disableOnInteraction: false
-      }
-    });
-  </script>
+    </section>
 </body>
 </html>
