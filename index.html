@@ -6,88 +6,130 @@
     <title>DentalCAD4You - Soluções Digitais</title>
     <style>
         :root {
-            --azul: #2a7fba;
+            --azul-principal: #2a7fba;
             --laranja: #ff6b35;
             --cinza: #4a4a4a;
         }
 
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Arial', sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
         }
 
+        body {
+            background: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
         .cabecalho {
             text-align: center;
-            padding: 40px;
-            background: linear-gradient(135deg, var(--azul), #1a5276);
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--azul-principal), #1a5276);
             color: white;
-            border-radius: 15px;
-            margin-bottom: 40px;
         }
 
         .destaque {
-            font-size: 1.4em;
-            margin: 20px 0;
+            font-size: 1.4rem;
+            margin: 1.5rem 0;
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 2rem;
         }
 
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Cards de Serviços */
         .servicos {
             display: grid;
-            gap: 30px;
-            margin: 40px 0;
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
-        .servico {
+        .card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 2rem;
+            border-radius: 1rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
             border-left: 4px solid var(--laranja);
         }
 
-        .servico h3 {
-            color: var(--azul);
-            margin-bottom: 15px;
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        .servico ul {
+        .card h3 {
+            color: var(--azul-principal);
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
             list-style: none;
-            padding-left: 20px;
+            margin: 1rem 0;
         }
 
-        .servico li {
-            margin: 10px 0;
-            padding-left: 25px;
-            position: relative;
+        .card li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .servico li::before {
+        .card li::before {
             content: "•";
             color: var(--laranja);
-            position: absolute;
-            left: 0;
             font-weight: bold;
         }
 
+        /* Rodapé/Contato */
         .contato {
-            text-align: center;
-            padding: 40px;
-            background: var(--azul);
+            background: var(--azul-principal);
             color: white;
-            border-radius: 15px;
-            margin-top: 40px;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .contato-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
         }
 
         .contato a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            padding: 10px 20px;
+            padding: 0.8rem 1.5rem;
             border: 2px solid white;
-            border-radius: 25px;
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .contato a:hover {
+            background: white;
+            color: var(--azul-principal);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .servicos {
+                grid-template-columns: 1fr;
+            }
+            
+            .contato-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
     </style>
 </head>
@@ -98,46 +140,49 @@
         <p>Projete diretamente para seu fluxo de trabalho atual</p>
     </header>
 
-    <section class="servicos">
-        <!-- Modelagem 3D -->
-        <div class="servico">
-            <h3>Modelagem 3D</h3>
-            <p>Projeto digital para implantes e próteses</p>
-            <ul>
-                <li>Trabalhos de até 25cm</li>
-                <li>Compatível com scanners intraorais</li>
-                <li>Integração sem falhas</li>
-            </ul>
-        </div>
+    <main class="container">
+        <section class="servicos">
+            <!-- Modelagem 3D -->
+            <article class="card">
+                <h3>Modelagem 3D</h3>
+                <p>Projeto digital para implantes e próteses</p>
+                <ul>
+                    <li>Trabalhos de até 25cm</li>
+                    <li>Compatível com scanners intraorais</li>
+                    <li>Integração sem falhas</li>
+                </ul>
+            </article>
 
-        <!-- Planejamento Cirúrgico -->
-        <div class="servico">
-            <h3>Planejamento Cirúrgico</h3>
-            <p>Ferramentas completas com precisão cirúrgica</p>
-            <ul>
-                <li>Análise de densidade óssea</li>
-                <li>Simulação de posicionamento</li>
-            </ul>
-        </div>
+            <!-- Planejamento Cirúrgico -->
+            <article class="card">
+                <h3>Planejamento Cirúrgico</h3>
+                <p>Ferramentas completas com precisão cirúrgica</p>
+                <ul>
+                    <li>Análise de densidade óssea</li>
+                    <li>Simulação de posicionamento</li>
+                </ul>
+            </article>
 
-        <!-- Impressão 3D -->
-        <div class="servico">
-            <h3>Impressão 3D</h3>
-            <p>Prototipagem rápida e precisa</p>
-            <ul>
-                <li>Materiais biocompatíveis</li>
-                <li>Suporte para SLA/DLP</li>
-            </ul>
-        </div>
-    </section>
+            <!-- Impressão 3D -->
+            <article class="card">
+                <h3>Impressão 3D</h3>
+                <p>Prototipagem rápida e precisa</p>
+                <ul>
+                    <li>Materiais biocompatíveis</li>
+                    <li>Suporte para SLA/DLP</li>
+                </ul>
+            </article>
+        </section>
+    </main>
 
     <footer class="contato">
         <h3>Entre em Contato</h3>
-        <div style="margin: 25px 0">
+        <div class="contato-links">
             <a href="tel:+5511999999999">📞 (11) 99999-9999</a>
             <a href="mailto:contato@dentalcad.com">📧 contato@dentalcad.com</a>
-            <a href="https://wa.me/5511999999999">💬 WhatsApp</a>
+            <a href="https://wa.me/5511999999999" target="_blank">💬 WhatsApp</a>
         </div>
+        <p>© 2024 DentalCAD4You - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
