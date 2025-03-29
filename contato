@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contato - DentalCAD4You</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 0 auto; padding: 20px; }
+        form { background: #f8f9fa; padding: 20px; border-radius: 8px; }
+        input, textarea { width: 100%; margin: 8px 0; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Envie seus arquivos</h1>
+    <form action="https://formsubmit.co/cristiano.dincao@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="file" name="arquivos" multiple accept=".stl,.dcm,.dicom">
+        <textarea name="mensagem" placeholder="Detalhes do serviço"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <a href="index.html">← Voltar</a>
+</body>
+</html>
