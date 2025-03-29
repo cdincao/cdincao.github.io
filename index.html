@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DentalCAD4You - Serviços</title>
-  <!-- Swiper CSS -->
+  <!-- Link para o CSS do SwiperJS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <style>
+    /* Reset e Estilos Globais */
     * {
       margin: 0;
       padding: 0;
@@ -14,34 +15,47 @@
       font-family: 'Arial', sans-serif;
     }
 
-    /* Container principal */
-    .services-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
+    body {
+      background-color: #f9f9f9;
+      padding: 20px;
     }
 
-    .services-container h2 {
+    /* Container do Carrossel */
+    .services-carousel {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    .services-carousel h2 {
       text-align: center;
       margin-bottom: 30px;
       color: #2c3e50;
+      font-size: 28px;
     }
 
-    /* Carrossel */
-    .swiper {
-      width: 100%;
-      padding: 20px 0;
+    /* Estilos dos Cards */
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
     }
 
-    /* Cards de serviços */
     .service-card {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 25px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
       text-align: center;
-      height: auto;
-      margin: 0 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
     .service-card img {
@@ -53,51 +67,55 @@
     .service-card h3 {
       color: #3498db;
       margin-bottom: 10px;
+      font-size: 20px;
     }
 
     .service-card p {
       color: #555;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-size: 14px;
+      line-height: 1.5;
     }
 
     .service-card button {
-      background: #3498db;
+      background-color: #3498db;
       color: white;
       border: none;
-      padding: 8px 16px;
+      padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
-    /* Navegação */
-    .swiper-button-next,
-    .swiper-button-prev {
+    .service-card button:hover {
+      background-color: #2980b9;
+    }
+
+    /* Navegação do Swiper */
+    .swiper-button-next, .swiper-button-prev {
       color: #3498db !important;
-      background: rgba(255, 255, 255, 0.8);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #3498db !important;
     }
 
     /* Responsividade */
     @media (max-width: 768px) {
-      .swiper-button-next,
-      .swiper-button-prev {
-        display: none;
+      .service-card {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="services-container">
+  <!-- Seção do Carrossel -->
+  <section class="services-carousel">
     <h2>NOSSOS SERVIÇOS</h2>
-    
-    <!-- Carrossel -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <!-- Card 1 -->
+        <!-- Card 1: Modelagem 3D -->
         <div class="swiper-slide">
           <div class="service-card">
             <img src="https://via.placeholder.com/60x60?text=3D" alt="Modelagem 3D">
@@ -107,7 +125,7 @@
           </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Card 2: Planejamento Cirúrgico -->
         <div class="swiper-slide">
           <div class="service-card">
             <img src="https://via.placeholder.com/60x60?text=✚" alt="Cirurgia">
@@ -117,40 +135,44 @@
           </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Card 3: Impressão 3D -->
         <div class="swiper-slide">
           <div class="service-card">
-            <img src="https://via.placeholder.com/60x60?text=🖨️" alt="Impressão 3D">
+            <img src="https://via.placeholder.com/60x60?text=🖨️" alt="Impressora 3D">
             <h3>Impressão 3D</h3>
             <p>Protótipos em materiais biocompatíveis com suporte para multicolor.</p>
             <button>Saiba mais</button>
           </div>
         </div>
 
-        <!-- Card 4 (Destaque Exocad) -->
+        <!-- Card 4: Integração Exocad (Diferencial) -->
         <div class="swiper-slide">
-          <div class="service-card" style="background: #e3f2fd; border: 1px solid #3498db;">
+          <div class="service-card" style="background-color: #e3f2fd;">
             <img src="https://via.placeholder.com/60x60?text=EXO" alt="Exocad">
             <h3>Integração Exocad</h3>
-            <p>Único software com integração total ao Exocad.</p>
+            <p>Único software com integração total ao Exocad para fluxos de trabalho otimizados.</p>
             <button>Demonstração</button>
           </div>
         </div>
       </div>
 
-      <!-- Controles -->
+      <!-- Controles de Navegação -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
-  </div>
+  </section>
 
-  <!-- Swiper JS -->
+  <!-- Scripts do SwiperJS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto", // Ajusta automaticamente ao tamanho do card
+      slidesPerView: 1,
       spaceBetween: 20,
-      centeredSlides: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -162,6 +184,10 @@
         1024: {
           slidesPerView: 3,
         },
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
       },
     });
   </script>
