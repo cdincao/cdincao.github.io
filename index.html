@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DentalCAD4You - Soluções Integradas</title>
+    <title>DentalCAD4You - Soluções Digitais</title>
     <style>
         :root {
-            --azul-principal: #2a7fba;
+            --azul: #2a7fba;
             --laranja: #ff6b35;
-            --cinza: #555;
+            --cinza: #4a4a4a;
         }
 
         body {
@@ -17,54 +17,55 @@
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
+            background-color: #f9f9f9;
         }
 
         .cabecalho {
             text-align: center;
             padding: 40px;
-            background: #f0f8ff;
+            background: linear-gradient(135deg, var(--azul), #1a5276);
+            color: white;
             border-radius: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .destaque {
-            color: var(--azul-principal);
-            font-size: 1.3em;
+            font-size: 1.4em;
             margin: 20px 0;
-            padding: 10px;
-            border-radius: 5px;
+        }
+
+        .servicos {
+            display: grid;
+            gap: 30px;
+            margin: 40px 0;
         }
 
         .servico {
-            margin-bottom: 40px;
-            padding: 25px;
-            border-left: 4px solid var(--azul-principal);
-            transition: all 0.3s ease;
-        }
-
-        .servico:hover {
-            background: #f8f9fa;
-            transform: translateX(10px);
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--laranja);
         }
 
         .servico h3 {
-            color: var(--azul-principal);
+            color: var(--azul);
             margin-bottom: 15px;
         }
 
-        ul {
+        .servico ul {
             list-style: none;
+            padding-left: 20px;
+        }
+
+        .servico li {
+            margin: 10px 0;
             padding-left: 25px;
-        }
-
-        li {
-            margin-bottom: 10px;
             position: relative;
-            padding-left: 30px;
         }
 
-        li:before {
-            content: "▸";
+        .servico li::before {
+            content: "•";
             color: var(--laranja);
             position: absolute;
             left: 0;
@@ -72,12 +73,12 @@
         }
 
         .contato {
-            background: var(--azul-principal);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            margin-top: 50px;
             text-align: center;
+            padding: 40px;
+            background: var(--azul);
+            color: white;
+            border-radius: 15px;
+            margin-top: 40px;
         }
 
         .contato a {
@@ -87,78 +88,56 @@
             padding: 10px 20px;
             border: 2px solid white;
             border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .contato a:hover {
-            background: white;
-            color: var(--azul-principal);
-        }
-
-        .btn-servico {
-            display: inline-block;
-            background: var(--laranja);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 15px;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header class="cabecalho">
         <h1>Bem-vindo ao DentalCAD4You</h1>
-        <p class="destaque">ÚNICO SOFTWARE COM INTEGRAÇÃO TOTAL AO EXOCAD</p>
+        <div class="destaque">ÚNICO SOFTWARE COM INTEGRAÇÃO TOTAL AO EXOCAD</div>
         <p>Projete diretamente para seu fluxo de trabalho atual</p>
     </header>
 
-    <main>
-        <section>
-            <h2>NOSSOS SERVIÇOS</h2>
-            
-            <div class="servico">
-                <h3>Modelagem 3D</h3>
-                <p>Projeto digital para implantes e próteses</p>
-                <ul>
-                    <li>Trabalhos de até 25cm</li>
-                    <li>Compatível com scanners intraorais</li>
-                    <li>Integração sem falhas</li>
-                </ul>
-                <a href="#contato" class="btn-servico">Solicitar Demonstração</a>
-            </div>
+    <section class="servicos">
+        <!-- Modelagem 3D -->
+        <div class="servico">
+            <h3>Modelagem 3D</h3>
+            <p>Projeto digital para implantes e próteses</p>
+            <ul>
+                <li>Trabalhos de até 25cm</li>
+                <li>Compatível com scanners intraorais</li>
+                <li>Integração sem falhas</li>
+            </ul>
+        </div>
 
-            <div class="servico">
-                <h3>Planejamento Cirúrgico</h3>
-                <p>Ferramentas completas com precisão cirúrgica</p>
-                <ul>
-                    <li>Análise de densidade óssea</li>
-                    <li>Simulação de posicionamento</li>
-                </ul>
-                <a href="#contato" class="btn-servico">Agendar Consulta</a>
-            </div>
+        <!-- Planejamento Cirúrgico -->
+        <div class="servico">
+            <h3>Planejamento Cirúrgico</h3>
+            <p>Ferramentas completas com precisão cirúrgica</p>
+            <ul>
+                <li>Análise de densidade óssea</li>
+                <li>Simulação de posicionamento</li>
+            </ul>
+        </div>
 
-            <div class="servico">
-                <h3>Impressão 3D</h3>
-                <p>Prototipagem rápida e precisa</p>
-                <ul>
-                    <li>Materiais biocompatíveis</li>
-                    <li>Suporte para SLA/DLP</li>
-                </ul>
-                <a href="#contato" class="btn-servico">Orçamento Rápido</a>
-            </div>
-        </section>
-    </main>
+        <!-- Impressão 3D -->
+        <div class="servico">
+            <h3>Impressão 3D</h3>
+            <p>Prototipagem rápida e precisa</p>
+            <ul>
+                <li>Materiais biocompatíveis</li>
+                <li>Suporte para SLA/DLP</li>
+            </ul>
+        </div>
+    </section>
 
-    <footer id="contato" class="contato">
+    <footer class="contato">
         <h3>Entre em Contato</h3>
         <div style="margin: 25px 0">
             <a href="tel:+5511999999999">📞 (11) 99999-9999</a>
             <a href="mailto:contato@dentalcad.com">📧 contato@dentalcad.com</a>
-            <a href="https://wa.me/5511999999999" target="_blank">💬 WhatsApp</a>
+            <a href="https://wa.me/5511999999999">💬 WhatsApp</a>
         </div>
-        <p>© 2024 DentalCAD4You - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
