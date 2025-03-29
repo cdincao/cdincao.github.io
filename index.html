@@ -20,18 +20,17 @@
             line-height: 1.8;
         }
 
-        /* Header Holográfico */
+        /* Cabeçalho Atualizado */
         .hero {
             background: linear-gradient(135deg, var(--azul-profundo) 0%, #0D47A1 100%);
             padding: 80px 0 120px;
             position: relative;
-            overflow: hidden;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
             text-align: center;
         }
 
         .logo-container {
-            width: 220px;
+            width: 280px;
             margin: 0 auto 30px;
         }
 
@@ -48,7 +47,6 @@
             border-radius: 30px;
             display: inline-block;
             backdrop-filter: blur(3px);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         /* Conteúdo Principal */
@@ -86,7 +84,6 @@
             box-shadow: 0 6px 20px rgba(0,184,212,0.6);
         }
 
-        /* Navegação */
         nav {
             text-align: center;
             margin: 30px 0;
@@ -107,21 +104,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header class="hero">
         <div class="logo-container">
-            <svg class="logo-svg" width="220" height="70" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg">
+            <!-- LOGOTIPO CORRIGIDO (COM "CAD") -->
+            <svg class="logo-svg" width="280" height="70" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg">
                 <path d="M35,25 Q50,10 70,15 Q85,25 75,40 Q60,50 40,45 Q25,35 35,25 Z" 
                       fill="var(--branco-absoluto)" stroke="var(--azul-profundo)" stroke-width="1.5"/>
                 <rect x="90" y="20" width="35" height="35" fill="none" stroke="var(--branco-absoluto)" stroke-width="2"/>
-                <text x="135" y="40" font-family="Arial" font-weight="bold" font-size="22" fill="var(--branco-absoluto)">DentalCAD</text>
-                <text x="135" y="55" font-family="Arial" font-size="16" fill="var(--ciano-tecnologico)">4You</text>
+                <text x="140" y="40" font-family="Arial" font-weight="bold" font-size="22" fill="var(--branco-absoluto)">DentalCAD</text>
+                <text x="140" y="55" font-family="Arial" font-size="16" fill="var(--ciano-tecnologico)">4You</text>
             </svg>
         </div>
         <div class="sublogo">INOVAÇÃO TECNOLÓGICA EM ODONTOLOGIA</div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <div class="main-content">
         <nav>
             <a href="index.html">Home</a>
@@ -132,23 +128,7 @@
         <h1>Bem-vindo ao <span style="color: var(--ciano-tecnologico)">DentalCAD4You</span></h1>
         
         <div style="text-align: center; margin: 40px 0;">
-            <a href="servicos.html" class="cta-button">Ver Serviços</a>
-        </div>
-
-        <!-- Seção de Destaques -->
-        <div style="display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-            <div style="background: var(--cinza-clinico); padding: 20px; border-radius: 10px;">
-                <h3>🦷 Modelagem 3D</h3>
-                <p>Precisão digital para implantes e próteses</p>
-            </div>
-            <div style="background: var(--cinza-clinico); padding: 20px; border-radius: 10px;">
-                <h3>📐 Análise Oclusal</h3>
-                <p>Simulação biomecânica avançada</p>
-            </div>
-            <div style="background: var(--cinza-clinico); padding: 20px; border-radius: 10px;">
-                <h3>🖨️ Impressão 3D</h3>
-                <p>Prototipagem rápida e precisa</p>
-            </div>
+            <a href="servicos.html" class="cta-button">CONHEÇA NOSSOS SERVIÇOS</a>
         </div>
     </div>
 </body>
